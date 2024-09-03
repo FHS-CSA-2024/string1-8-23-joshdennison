@@ -83,7 +83,13 @@ public class String1
      * makeOutWord("[[]]", "word") â†’ "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return unimplemented;
+        String output= "";
+        int length = out.length();
+        
+        String firstthing = out.substring(0,length/2);
+        String lastthing =out.substring(length/2,length);
+        output= firstthing+word+lastthing;
+        return output;
     }
 
     /*
@@ -94,7 +100,13 @@ public class String1
      * extraEnd("Hi") â†’ "HiHiHi"
      */
     public String extraEnd(String str) {
-        return unimplemented;
+        String output= "";
+        int length = 0;
+        length = str.length();
+        output= str.substring(length-3, length -1);
+        String output2 = output+ output+ output;
+        
+        return output2;
     }
 
     /*
@@ -107,9 +119,19 @@ public class String1
      * firstTwo("ab") â†’ "ab"
      */
     public String firstTwo(String str) {
-        return unimplemented;
+        int length =0;
+        length = str.length();
+       if(length <= 2){
+           return str;
+       }
+       else {
+           String output= "";
+        
+       output = str.substring(0,2);
+        
+        return output;
     }
-
+}
     /*
      * Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".]
      * firstHalf("WooHoo") â†’ "Woo"

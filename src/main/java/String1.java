@@ -332,8 +332,12 @@ public class String1
      * deFront("java") â†’ "va"
      * deFront("away") â†’ "aay"
      */
-    public String deFront(String str) {    
-        return unimplemented;
+    public String deFront(String str) {
+        int length = str.length();
+        
+        String output = str.substring(2,length);
+        
+        return output;
     }
 
 }

@@ -1,4 +1,4 @@
-package src.main.java;
+//package src.main.java;
 
 
 public class String1
@@ -52,8 +52,8 @@ public class String1
      * makeAbba("What", "Up") â†’ "WhatUpUpWhat"
      */
     public String makeAbba(String a, String b) {
-        String output= "";
-        output= a+b+b+a;
+        String output=  a+b+b+a;
+       
         
         return output;
     }
@@ -67,8 +67,8 @@ public class String1
      * makeTags("cite", "Yay") â†’ "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        String output= "";
-        output= "<" +tag +">"+ word + "</" + tag + ">" ;
+        String output= "<" +tag +">"+ word + "</" + tag + ">" ;
+        
         return output;
     }
 
@@ -139,7 +139,9 @@ public class String1
      * firstHalf("abcdef") â†’ "abc"
      */
     public String firstHalf(String str) {
-        return unimplemented;
+        int length = str.length();
+        String output = str.substring(0,length/2);
+        return output;
     }
 
     /*
@@ -150,8 +152,16 @@ public class String1
      * withoutEnd("coding") â†’ "odin"
      */
     public String withoutEnd(String str) {
-        return unimplemented;
+        int length = str.length();
+        
+        
+        
+        
+        String output = str.substring(1,length-1);
+           
+        return output ;
     }
+    
 
     /*
      * Given 2 strings, a and b, return a string of the form short+long+short, with the 
@@ -162,7 +172,16 @@ public class String1
      * comboString("aaa", "b") â†’ "baaab"
      */
     public String comboString(String a, String b) {
-        return unimplemented;
+       String output = "";
+        int length1 = a.length();
+        int length2 = b.length();
+        if (length1>length2){
+            output = b+a+b;
+        }
+        else {
+            output= a+b+a;
+        }
+        return output;
     }
 
     /*
@@ -173,7 +192,10 @@ public class String1
      * middleThree("solving") â†’ "lvi"
      */
     public String middleThree(String str) {
-        return unimplemented;
+        int length = str.length();
+        String output = str.substring(1, length-1);
+        return output;
+        
     }
 
     /*
@@ -184,7 +206,9 @@ public class String1
      * extraFront("H") â†’ "HHH"
      */
     public String extraFront(String str) {
-        return unimplemented;
+        String output = str.substring(0,2);
+        String output2 = output+output+output;
+        return output2;
     }
 
     /*
@@ -195,7 +219,11 @@ public class String1
      * left2("Hi") â†’ "Hi"
      */
     public String left2(String str) {
-        return unimplemented;
+        int length = str.length();
+        String firstpart = str.substring(0,2);
+        String secondpart= str.substring(2,length);
+        String output = secondpart+firstpart;
+        return output;
     }
 
     /*
@@ -207,8 +235,26 @@ public class String1
      * hasBad("xxbadxx") â†’ false
      */
     public boolean hasBad(String str) {
-        return false;
+        int index = str.indexOf("bad",0);
+        int length = str.length();
+        boolean output = true;
+
+        
+        if (index < 2 && index >=0){
+        output = true;
+        //return output;
+        }
+        else{
+        output= false;
+        //return output;
+        }
+        
+        return output;
+
     }
+       
+
+    
 
     /*
      * Given two strings, append them together (known as "concatenation") and return the result. 
@@ -219,7 +265,19 @@ public class String1
      * conCat("abc", "") â†’ "abc"
      */
     public String conCat(String a, String b) {
-        return unimplemented;
+        int length1 = a.length();
+        int length2 = b.length();
+        String thing1 = a.substring((length1 -1),length1);
+        String thing2 = b.substring(0,1);
+        String output = "";
+        if(thing1 == thing2){
+            output = a.substring(0,length1 -1)+b;
+            
+        }
+        else { output = a+b;
+        }
+        
+        return output;
     }
 
     /*
@@ -233,7 +291,16 @@ public class String1
      *minCat("java", "Hello") â†’ "javaello"
      */
     public String minCat(String a, String b) {
-        return unimplemented;
+        int length1 = a.length();
+         int length2 = b.length();
+         String output="";
+         if (length1>length2){
+             output = a.substring(length1-length2,length1)+b;
+             
+            }
+            else{
+              output = a + b.substring(length2-length1,length2);}
+        return output;
     }
 
     /*
@@ -244,7 +311,16 @@ public class String1
      * withoutX("Hxix") â†’ "Hxi"
      */
     public String withoutX(String str) {
-        return unimplemented;
+        String output ="";
+        String x = "x";
+        int index = str.indexOf(x,0);
+        int length= str.length();
+        
+        if (index > -1){
+        }
+        
+        
+        return output;
     }
 
     /*

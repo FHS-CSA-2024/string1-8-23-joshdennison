@@ -103,6 +103,7 @@ public class String1
         String output= "";
         int length = 0;
         length = str.length();
+        //substring already subtracts 1 from the "to"
         output= str.substring(length-3, length -1);
         String output2 = output+ output+ output;
         
@@ -193,6 +194,7 @@ public class String1
      */
     public String middleThree(String str) {
         int length = str.length();
+        //Adjust the starting postion based on the length
         String output = str.substring(1, length-1);
         return output;
         
@@ -206,6 +208,7 @@ public class String1
      * extraFront("H") â†’ "HHH"
      */
     public String extraFront(String str) {
+        //This will only work on strings that are 3 or more characters long
         String output = str.substring(0,2);
         String output2 = output+output+output;
         return output2;
@@ -270,6 +273,7 @@ public class String1
         String thing1 = a.substring((length1 -1),length1);
         String thing2 = b.substring(0,1);
         String output = "";
+        //Duuuuuude use .equals()
         if(thing1 == thing2){
             output = a.substring(0,length1 -1)+b;
             
@@ -311,6 +315,7 @@ public class String1
      * withoutX("Hxix") â†’ "Hxi"
      */
     public String withoutX(String str) {
+        //Gotta finish the function dude
         String output ="";
         String x = "x";
         int index = str.indexOf(x,0);
@@ -334,7 +339,7 @@ public class String1
      */
     public String deFront(String str) {
         int length = str.length();
-        
+        //You should keep a in the 0 position and b in the 1 position
         String output = str.substring(2,length);
         
         return output;
